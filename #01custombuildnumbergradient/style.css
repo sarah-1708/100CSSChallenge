@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    background: rgb(67, 57, 159);
+    background: linear-gradient(14deg, rgba(67, 57, 159, 1) 30%, rgba(78, 197, 202, 1) 100%);
+    width: 400px;
+    height: 400px;
+    position: absolute;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    position: relative;
+    margin-top: 24%;
+    margin-left: 0 auto;
+}
+
+h1,
+h4 {
+    color: white;
+}
+
+h1 {
+    font-size: 90px;
+}
+
+h4 {
+    font-size: 34px;
+}
+
+.number {
+    display: flex;
+}
+
+.one {
+    display: flex;
+    margin-left: 26px;
+}
+
+.verticalOne {
+    height: 92px;
+    width: 25px;
+    background-color: white;
+    border-radius: 3px;
+    z-index: 4;
+    box-shadow: -1px 1px 39px -3px grey;
+}
+
+.obliqueOne {
+    width: 25px;
+    height: 44px;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(14deg, rgba(255, 255, 255, 1) 30%, rgba(239, 239, 239, 1) 100%);
+    border-radius: 3px;
+    transform: rotate(60deg);
+    margin-left: -45px;
+    z-index: 3;
+}
+
+.numberZero {
+    width: 50px;
+    border-radius: 50%;
+    border: 20px solid white;
+    height: 50px;
+    box-shadow: -1px 1px 39px -3px grey;
+    margin-left: -6px;
+}
+
+.numberZero.right {
+    z-index: 1;
+}
+
+.numberZero.left {
+    z-index: 2;
+}
