@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    background-color: #3faf82;
+    width: 400px;
+    height: 400px;
+}
+
+.burger {
+    width: 50%;
+    height: 22%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: absolute;
+    margin-top: 10%;
+    margin-left: 7%;
+}
+
+
+.line {
+    width: 30%;
+    background-color: white;
+    height: 10px;
+    border-radius: 3px;
+    box-shadow: 0px 2px 19px -2px black;
+
+}
+
+.top {
+
+    animation: 2000ms forwards levelBottom,
+        2000ms 2000ms forwards anticross,
+        2000ms 4000ms forwards anticrossagain,
+        2000ms 6000ms forwards levelUp;
+}
+
+.bottom {
+
+    animation: 2000ms forwards levelUp,
+        2000ms 2000ms forwards cross,
+        2000ms 4000ms forwards crossagain,
+        2000ms 6000ms forwards levelBottom;
+}
+
+.middle {
+
+    animation: 2000ms forwards levelUp,
+        2000ms 2000ms forwards cross,
+        2000ms 4000ms forwards crossagain,
+        2000ms 6000ms forwards levelBottom;
+}
+
+
+@keyframes levelUp {
+    from {
+        margin-top: 0px;
+    }
+
+    to {
+        margin-top: -42px;
+    }
+}
+
+@keyframes levelBottom {
+    from {
+        margin-top: 0px;
+    }
+
+    to {
+        margin-top: 40px;
+    }
+}
+
+@keyframes cross {
+    from {
+        transform: none;
+    }
+
+    to {
+        transform: rotate(45deg)
+    }
+}
+
+@keyframes anticross {
+    from {
+        transform: none;
+    }
+
+    to {
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes crossagain {
+    from {
+        transform: rotate(45deg)
+    }
+
+    to {
+        transform: none;
+    }
+}
+
+@keyframes anticrossagain {
+    from {
+        transform: rotate(-45deg)
+    }
+
+    to {
+        transform: none;
+    }
+}
